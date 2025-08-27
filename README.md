@@ -3,7 +3,7 @@
 **Nerv-IDE** is a **real-time collaborative code editor** that empowers developers to seamlessly work together.  
 Multiple users can enter a room, share a unique Nerv-Room ID, and collaborate on code simultaneously — with live chat, drawing, syntax highlighting, and even an **AI-powered copilot**.  
 
-🌍 **Repo:** [github.com/kenxpx/Nerv-IDE](https://github.com/kenxpx/Nerv-IDE)  
+🌍 **Repo:** [Nerv-IDE](https://github.com/kenxpx/Nerv-IDE)  
 
 ---
 
@@ -71,7 +71,7 @@ cd server
 npm run dev
 ```
 
-Access 👉 [http://localhost:5173/](http://localhost:5173/)  
+Access --> [http://localhost:8080](http://localhost:8080/)  
 
 ---
 
@@ -110,7 +110,7 @@ This project is licensed under the **MIT License**.
 
 ## 👨‍💻 Developer  
 
-**Author:** [@kenxpx](https://github.com/kenxpx)  
+**Author:** [Kenxpx](https://github.com/Kenxpx)  
 Building futuristic, collaborative, and open-source tools.  
 
 ---
