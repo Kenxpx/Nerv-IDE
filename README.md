@@ -42,9 +42,6 @@ Multiple users can enter a room, share a unique Nerv-Room ID, and collaborate on
 ```bash
 # Clone Nerv-IDE
 git clone https://github.com/kenxpx/Nerv-IDE.git
-
-# Install dependencies (both client + server)
-npm install
 ```
 
 Setup **.env** files:  
@@ -64,10 +61,13 @@ Run locally:
 ```bash
 # Frontend
 cd client
+npm install
 npm run dev
-
+```
+```bash
 # Backend
 cd server
+npm install
 npm run dev
 ```
 
