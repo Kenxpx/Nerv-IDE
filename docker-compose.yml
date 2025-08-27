@@ -1,0 +1,34 @@
+services:
+  server:
+    container_name: nerv-ide-server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: runner
+    volumes:
+      - ./server:/app
+      - /build/node_modules
+    networks:
+      - Nerv-IDE
+    ports:
+      - "3000:3000"
+
+  client:
+    container_name: nerv-ide-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: runner
+    volumes:
+      - ./client:/app
+      - /build/node_modules
+    networks:
+      - Nerv-IDE
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
+
+networks:
+  Nerv-IDE:
+    driver: bridge
