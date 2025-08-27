@@ -1,4 +1,4 @@
-# 🟥 Nerv-IDE 🟥  
+#  Nerv-IDE   
 
 **Nerv-IDE** is a **real-time collaborative code editor** that empowers developers to seamlessly work together.  
 Multiple users can enter a room, share a unique Nerv-Room ID, and collaborate on code simultaneously — with live chat, drawing, syntax highlighting, and even an **AI-powered copilot**.  
