@@ -7,7 +7,7 @@ function GitHubCorner() {
 
     return (
         <a
-            href="https://github.com/sahilatahar/Nerv-IDE"
+            href="https://github.com/Kenxpx/Nerv-IDE"
             className="github-corner"
             aria-label="View source on GitHub"
             target="_blank"
