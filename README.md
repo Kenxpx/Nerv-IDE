@@ -71,7 +71,7 @@ cd server
 npm run dev
 ```
 
-Access --> [http://localhost:8080](http://localhost:8080/)  
+Access --> [http://localhost:8080](http://localhost:5173/)  
 
 ---
 
