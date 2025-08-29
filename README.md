@@ -1,126 +1,103 @@
-#  Nerv-IDE   
+# Nerv-IDE
 
-**Nerv-IDE** is a **real-time collaborative code editor** that empowers developers to seamlessly work together.  
-Multiple users can enter a room, share a unique Nerv-Room ID, and collaborate on code simultaneously — with live chat, drawing, syntax highlighting, and even an **AI-powered copilot**.  
+**Nerv-IDE** is a next-generation **real-time collaborative code editor** that makes pair programming, group projects, and coding sessions seamless. Multiple developers can join the same room, share code, chat, draw, and even use an **AI-powered copilot** — all in the browser.
 
-🌍 **Repo:** [Nerv-IDE](https://github.com/kenxpx/Nerv-IDE)  
-
----
-
-## ✨ Features  
-
-- 💻 **Real-time collaboration** across multiple files  
-- 📁 File & folder management: create, open, save, delete, and organize projects  
-- 💾 Download the **entire project** as a ZIP archive  
-- 🚀 **Unique room generation** with Nerv-Room IDs  
-- 🌈 Syntax highlighting with **auto-language detection**  
-- ⚡ **Code execution** inside the IDE  
-- 🔔 Notifications for user join/leave events  
-- 👥 Real-time **user presence dashboard**  
-- 💬 Built-in **chat system** for communication  
-- 🎩 Hover **tooltips** showing who is editing what  
-- 🖊 Live **cursor tracking & text selection highlights**  
-- 🤖 **AI Copilot**: generate, replace, or fix code instantly  
-- 🎨 **Themes & font customization** for a personalized experience  
-- ✏️ **Collaborative drawing** canvas for brainstorming  
+🔴 **Live Demo:** [nervide.sachinbind.net](https://nervide.sachinbind.net/)  
+📦 **Docker Images:** `sachinxps/nerv-ide-server` · `sachinxps/nerv-ide-client`
 
 ---
 
-## ⚙️ Tech Stack  
+## ✨ Key Features
 
-- **Frontend:** React + TypeScript + TailwindCSS + React Router  
-- **Backend:** Node.js + Express.js + Socket.IO  
-- **Deployment:** Vercel + Docker  
-- **Version Control:** Git + GitHub  
+- ⚡ **Realtime collaboration** with shared rooms
+- 💬 Built-in **chat** and **presence tracking**
+- 👥 See who’s editing — with live **cursor & selection highlights**
+- 📂 File/folder management: create, edit, delete, and save
+- 💾 Export projects as **ZIP downloads**
+- 🎨 Customizable themes & fonts
+- 🖊 Collaborative **drawing board**
+- 🤖 **AI Copilot** for instant code generation/fixes
+- 🚀 **Code execution** powered by [Piston](https://github.com/engineer-man/piston)
 
 ---
 
-## 🚀 Installation  
+## 🛠 Tech Stack
 
-### Method 1: Manual  
+- **Frontend:** React · TypeScript · TailwindCSS · React Router  
+- **Backend:** Node.js · Express · Socket.IO  
+- **Infra:** Docker · Free hosting via Render (API) + Hostinger (Frontend)  
+- **Extras:** Piston API, tldraw library
 
+---
+
+## 🚀 Getting Started
+
+### Run locally (manual)
 ```bash
-# Clone Nerv-IDE
-git clone https://github.com/kenxpx/Nerv-IDE.git
+# Clone
+git clone https://github.com/Kenxpx/Nerv-IDE.git
+cd Nerv-IDE
 ```
 
-Setup **.env** files:  
-
-**Frontend (`client/.env`)**
+**Frontend `.env`**
 ```
-VITE_BACKEND_URL=<your_server_url>
+VITE_BACKEND_URL=http://localhost:3000
 ```
 
-**Backend (`server/.env`)**
+**Backend `.env`**
 ```
 PORT=3000
 ```
 
-Run locally:  
-
+**Start backend**
 ```bash
-# Frontend
-cd client
-npm install
-npm run dev
-```
-```bash
-# Backend
 cd server
 npm install
 npm run dev
 ```
 
-Access --> [http://localhost:8080](http://localhost:5173/)  
-
----
-
-### Method 2: Docker  
-
+**Start frontend (new terminal)**
 ```bash
-# Run Backend
-docker run -d -p 3000:3000 --name nerv-ide-server kenxpx/nerv-ide-server:latest  
-
-# Run Frontend
-docker run -d -p 5173:5173 --name nerv-ide-client kenxpx/nerv-ide-client:latest  
+cd client
+npm install
+npm run dev
 ```
 
----
-
-## 🌌 Roadmap  
-
-- 🔑 Admin Permissions — manage user access & room controls  
-- 🕹️ Anime-inspired **UI themes** (Nerv HQ console, MAGI System, etc.)  
-- 📡 Collaboration history & playback  
+Visit → http://localhost:5173
 
 ---
 
-## 🤝 Contributing  
+### Run with Docker (one-liners)
+```bash
+docker run -d -p 3000:3000 -e ALLOWED_ORIGINS=http://localhost:5173 --name nerv-ide-server sachinxps/nerv-ide-server:latest
 
-Contributions are welcome.  
-Fork → Commit → PR → Merge ✅  
+docker run -d -p 5173:5173 --name nerv-ide-client sachinxps/nerv-ide-client:latest
+```
 
----
-
-## 🧾 License  
-
-This project is licensed under the **MIT License**.  
+➡️ For production: use `sachinxps/nerv-ide-client:prod` (pre-built with hosted API URL).
 
 ---
 
-## 👨‍💻 Developer  
-
-**Author:** [Kenxpx](https://github.com/Kenxpx)  
-Building futuristic, collaborative, and open-source tools.  
-
----
-
-## 🌟 Appreciation  
-
-Special thanks to open-source projects that power Nerv-IDE:  
-- [Piston API](https://github.com/engineer-man/piston) — Code execution  
-- [tldraw](https://github.com/tldraw/tldraw) — Collaborative drawing  
+## 🌐 Deployment Example (Free Setup)
+- **Backend** → [Render](https://render.com/) (free web service from Docker image)
+- **Frontend** → [Hostinger](https://hostinger.com/) (upload `/client/dist` build)
+- **Domains** → Custom subdomains: `api.nervide.sachinbind.net` + `nervide.sachinbind.net`
 
 ---
 
-🔥 *Nerv-IDE — mission control for your collaborative coding.* 🚀  
+## 🤝 Contributing
+
+Contributions are welcome!  
+Fork → Branch → Commit → PR → Merge ✅
+
+---
+
+## 📜 License
+
+Released under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+Built by [Kenxpx](https://github.com/Kenxpx) · Dockerized & hosted by [Sachinxps](https://hub.docker.com/u/sachinxps)
